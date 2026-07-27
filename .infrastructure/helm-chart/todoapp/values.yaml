@@ -44,3 +44,14 @@ todoapp:
   pvc:
     requests:
       storage: 1Gi
+
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+          matchExpressions:
+          - key: app
+            operator: In
+            values:
+            - todoapp

@@ -23,5 +23,5 @@ spec:
       name: memory
       target:
         type: Utilization
-        averageUtilization: {{ .cpu.averageUtilization }}
+        averageUtilization: {{ .memory.averageUtilization }}
   {{- end }}
